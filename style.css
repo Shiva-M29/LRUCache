@@ -1,0 +1,113 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: auto;
+    background-color: #fff;
+    padding: 30px 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 10px #ccc;
+  }
+  
+  /* Flex container for form elements */
+  .flex-container {
+    display: flex;
+    align-items: center;
+    margin: 15px 0;
+  }
+  
+  .flex-container label {
+    width: 120px;
+    margin-right: 10px;
+  }
+  
+  /* Decrease the width of input fields */
+  .flex-container input {
+    flex: 0 0 55%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-right: 10px;
+  }
+  
+  h1, h2, h3 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  input {
+    font-size: 16px;
+  }
+  
+  /* Button group to arrange buttons side-by-side with spacing */
+  .button-group {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 15px;
+  }
+  
+  /* Attractive, smaller button styles with fixed width */
+  button {
+    padding: 8px 16px;
+    background: linear-gradient(45deg, #28a745, #218838);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s, transform 0.2s;
+  }
+  
+  button:hover {
+    background: linear-gradient(45deg, #218838, #1e7e34);
+    transform: scale(1.02);
+  }
+  
+  .result {
+    margin: 20px 0;
+    padding: 12px;
+    background-color: #e9ecef;
+    border-radius: 4px;
+  }
+  
+  /* Cache state container styling */
+  .cache-state {
+    margin: 20px 0;
+    padding: 12px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .cache-item {
+    background-color: #007bff;
+    color: white;
+    padding: 8px 12px;
+    margin: 5px;
+    border-radius: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .cache-item:hover {
+    transform: scale(1.05);
+  }
+  
+  .arrow {
+    font-size: 20px;
+    margin: 0 5px;
+    color: #333;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  

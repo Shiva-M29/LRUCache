@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Simple LRU Cache</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Simple LRU Cache</h1>
+    <div class="flex-container">
+      <label>Cache Capacity:</label>
+      <input id="capacity" value="3">
+      <button onclick="initCache()">Initialize Cache</button>
+    </div>
+    <hr>
+    <div id="cacheOps" class="hidden">
+      <h2>Cache Operations</h2>
+      <div class="flex-container">
+        <label>Key:</label>
+        <input id="keyInput">
+      </div>
+      <div class="flex-container">
+        <label>Value:</label>
+        <input id="valueInput">
+      </div>
+      <div class="button-group">
+        <button onclick="setCache()">Set Value</button>
+        <button onclick="getCache()">Get Value</button>
+      </div>
+    </div>
+    <div class="result" id="result"></div>
+    <h3>Cache State (MRU -> LRU):</h3>
+    <div class="cache-state" id="cacheState">
+      <!-- Dynamic cache state badges will be rendered here -->
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
