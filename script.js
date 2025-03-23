@@ -1,13 +1,8 @@
-/*
-  A simple LRU Cache using a Circular Doubly Linked List (CDLL)
-  Implemented with ES6 classes.
-*/
 
 class Node {
   constructor(key, value) {
     this.key = key;
     this.value = value;
-    // For a single node, point to itself.
     this.prev = this;
     this.next = this;
   }
@@ -17,9 +12,8 @@ class LRUCache {
   constructor(capacity) {
     this.capacity = capacity;
     this.map = new Map();
-    this.head = null; // Most recently used node.
+    this.head = null; 
   }
-  
   addToFront(node) {
     if (this.head === null) {
       this.head = node;
@@ -34,7 +28,7 @@ class LRUCache {
   }
   
   removeNode(node) {
-    if (node.next === node) { // Only one node.
+    if (node.next === node) { 
       this.head = null;
     } else {
       node.prev.next = node.next;
@@ -90,10 +84,10 @@ class LRUCache {
   }
 }
 
-// Global cache variable
+
 let cache = null;
 
-// Global functions defined as arrow functions for inline event handling.
+
 window.initCache = () => {
   const cap = Number(document.getElementById("capacity").value);
   if (cap > 0) {
@@ -130,7 +124,7 @@ window.getCache = () => {
   }
 };
 
-// Update the display with dynamic cache state badges
+
 const updateDisplay = () => {
   const stateData = cache.state();
   const container = document.getElementById("cacheState");
@@ -141,7 +135,7 @@ const updateDisplay = () => {
     return;
   }
   
-  // Create a document fragment to build elements
+ 
   const frag = document.createDocumentFragment();
   
   stateData.forEach((item, index) => {
@@ -151,7 +145,7 @@ const updateDisplay = () => {
     badge.textContent = `${item.key}:${item.value}`;
     frag.appendChild(badge);
     
-    // If not the last item, add an arrow.
+   
     if (index < stateData.length - 1) {
       const arrow = document.createElement("span");
       arrow.className = "arrow";
